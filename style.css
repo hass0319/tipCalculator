@@ -70,6 +70,7 @@ p {
   background-color: olive;
   box-shadow: 0 5px #999;
   transition: ease 0.5s;
+  cursor: pointer;
 }
 
 .btn:hover{
