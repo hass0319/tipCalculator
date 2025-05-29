@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".form-box");
   const billInput = document.getElementById("bill");
   const tipInput = document.getElementById("tip");
-  const totalDisplay = document.getElementById("total").querySelector("span");
+  const totalDisplay = document.getElementById("tipAmount");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tip = bill * (tipPercent / 100);
-    const total = bill + tip;
-    console.log(total);
-    totalDisplay.textContent = `$${total.toFixed(2)}`;
+    // console.log(tipPercent);
+    // console.log(bill);
+    // console.log(tip);
+    totalDisplay.textContent = `$${tip.toFixed(2)}`;
     totalDisplay.style.color = "red";
   });
 });
